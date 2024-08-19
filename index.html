@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Quiz</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f4f4f4;
+      }
+      .quiz-container {
+        background: #fff;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        max-width: 400px;
+        width: 100%;
+      }
+      .question {
+        font-size: 18px;
+        margin-bottom: 10px;
+      }
+      .choices {
+        list-style-type: none;
+        padding: 0;
+      }
+      .choices li {
+        margin-bottom: 10px;
+      }
+      .choices button {
+        padding: 10px;
+        width: 100%;
+        border: none;
+        background-color: #007bff;
+        color: white;
+        border-radius: 3px;
+        cursor: pointer;
+      }
+      .choices button:hover {
+        background-color: #0056b3;
+      }
+      #submitBtn,
+      #restartBtn,
+      #sendFeedbackBtn {
+        margin-top: 20px;
+        padding: 10px;
+        width: 100%;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+      }
+      #submitBtn {
+        background-color: #28a745;
+        color: white;
+      }
+      #submitBtn:hover {
+        background-color: #218838;
+      }
+      #restartBtn {
+        background-color: #dc3545;
+        color: white;
+        display: none;
+      }
+      #restartBtn:hover {
+        background-color: #c82333;
+      }
+      #feedbackForm {
+        margin-top: 20px;
+        display: none;
+        text-align: left;
+      }
+      #feedbackInput {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        margin-bottom: 10px;
+      }
+      #sendFeedbackBtn {
+        background-color: #007bff;
+        color: white;
+        display: none;
+      }
+      #sendFeedbackBtn:hover {
+        background-color: #0056b3;
+      }
+      #feedback {
+        margin-top: 15px;
+        font-size: 16px;
+        color: #555;
+      }
+      #result {
+        margin-top: 20px;
+        font-size: 18px;
+        font-weight: bold;
+      }
+      #questionCounter {
+        font-size: 16px;
+        margin-bottom: 15px;
+        color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="quiz-container">
+      <div id="questionCounter"></div>
+      <div id="quiz"></div>
+      <div id="feedback"></div>
+      <button id="submitBtn">Submit</button>
+      <button id="restartBtn">Restart Quiz</button>
+      <div id="result"></div>
+
+      <!-- Feedback Form -->
+      <div id="feedbackForm">
+        <textarea id="feedbackInput" placeholder="Your feedback..."></textarea>
+        <button id="sendFeedbackBtn">Send Feedback</button>
+      </div>
+    </div>
+
+    <script src="quiz.js"></script>
+  </body>
+</html>
